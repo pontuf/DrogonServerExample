@@ -1,2 +1,2 @@
 # DrogonServerExample
-Simple drogon example
+the simplest server example powered by Drogon
