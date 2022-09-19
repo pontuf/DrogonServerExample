@@ -5,3 +5,4 @@ build/build.ninja
 build/cmake*
 build/compile*
 build/Makefile
+build/DrogonServerExample
