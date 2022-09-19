@@ -4,3 +4,4 @@ build/test
 build/build.ninja
 build/cmake*
 build/compile*
+build/Makefile
