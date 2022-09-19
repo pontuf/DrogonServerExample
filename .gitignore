@@ -1,0 +1,6 @@
+build/.*
+build/CMake*
+build/test
+build/build.ninja
+build/cmake*
+build/compile*

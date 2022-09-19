@@ -2,7 +2,7 @@
 
 void Reg::asyncHandleHttpRequest(const HttpRequestPtr &req, std::function<void(const HttpResponsePtr &)> &&callback)
 {
-    auto clientPtr = drogon::app().getDbClient();
+    auto clientPtr = drogon::app().getDbClient("postgres");
 
     if (!req->session()->find("session-name") || !req->session()->find("session-pass"))
     {
@@ -11,7 +11,9 @@ void Reg::asyncHandleHttpRequest(const HttpRequestPtr &req, std::function<void(c
             if (req->getParameter("name").empty() || req->getParameter("pass").empty())
             {
                 std::string res = "";
-                res.append("<form style='display:flex;'>Name: <input type='text' name='name'>Password: <input type='text' name='pass'><input type='submit' formmethod='post' value='Register|Log in'></form>");
+                res.append("<form style='display:flex;'>Name: <input type='text' name='name'> \
+                Password: <input type='text' name='pass'> \
+                <input type='submit' formmethod='post' value='Register|Log in'></form>");
                 auto resp = HttpResponse::newHttpResponse();
                 resp->setStatusCode(k200OK);
                 resp->setContentTypeCode(CT_TEXT_HTML);

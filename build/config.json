@@ -21,6 +21,19 @@
       "is_fast": false,
       "connection_number": 1,
       "filename": "drogon.db"
+    }, 
+    {
+      "name":"postgres",
+      "rdbms": "postgresql",
+      "host": "localhost",
+      "port": 5432,
+      "dbname": "drogon",
+      "user": "drogon",
+      "passwd": "1",
+      "is_fast": false,
+      "number_of_connections": 1,
+      "timeout": -1.0,
+      "auto_batch": false
     }
   ]
 }
