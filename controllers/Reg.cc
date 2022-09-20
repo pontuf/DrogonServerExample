@@ -33,7 +33,7 @@ void Reg::asyncHandleHttpRequest(const HttpRequestPtr &req, std::function<void(c
                 if (check.size() == 0)
                 {
                     auto result = clientPtr->execSqlSync("insert into users(user_role, user_status, user_name, user_token) \
-                     values (2, 1, $1, $2)", name, pass);
+                     values (2, 0, $1, $2)", name, pass);
                 }
                 else
                 {
